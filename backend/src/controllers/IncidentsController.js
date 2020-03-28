@@ -57,6 +57,16 @@ module.exports = {
             .select('ong_id')
             .first();
 
+        if(!ong_id){
+            return response.status(401)
+                .json( {error: "ONG ID not found."});
+        }
+
+        if(!incident){
+            return response.status(401)
+                .json( {error: "Incident not found."});
+        }
+
         if (ong_id != incident.ong_id){
             return response.status(401)
                 .json( {error: "Operation denied! Cannot delete incidents from another ONG."});
