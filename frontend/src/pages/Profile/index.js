@@ -48,7 +48,7 @@ export default function Profile(){
             <header>
             
                 <img src={imgLogo} alt="Be The Hero" />
-                <span>Bem vinda, {ongName}</span>
+                <span>Bem Vindo(a), {ongName}!</span>
 
                 <Link className="button" to="/incidents/new">Cadastrar Novo Caso</Link>
                 <button 
